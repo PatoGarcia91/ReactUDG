@@ -1,0 +1,23 @@
+.navbar{
+    display: flex;
+}
+
+header .logo-img {
+    max-width: 10%;
+    height: auto;
+  }
+
+.titulo{
+    color: whitesmoke;
+  }
+
+.enlaces{
+align-self: flex-end;
+color:whitesmoke;
+}
+
+.enlaces a{
+    float: right;
+    color:whitesmoke;
+    }
+    
