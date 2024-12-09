@@ -1,0 +1,45 @@
+.card{
+    float: left;
+    margin-top: 5%;
+    width: 23vw;
+    color: whitesmoke;
+
+  }
+  .card-title{
+    text-align: center;
+    color: whitesmoke;
+  }
+
+.tarjeta{
+    border: 2px solid black;
+    float: left;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    border-radius: 1%;
+  }
+  
+  .card-footer{
+    float: center;
+    text-decoration: underline;
+    color: whitesmoke;
+
+    }
+  
+  .btnAgregar{
+      float: left;
+    }
+  
+  .claro{
+    color: #fafafa;
+    /* border-color: #fafafa; */
+  }
+
+  .portada{
+    margin: 1%;
+    width: 350px;
+    height: 210px;
+    border-radius: 5%;
+    float: left;
+  }

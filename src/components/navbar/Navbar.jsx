@@ -1,10 +1,13 @@
 import './Navbar.css'
-import Carrito from './Carrito.jsx'
+import { Link } from 'react-router-dom';
+import CarritoWidget from "../carritoWidget/CarritoWidget";
+import Carrito from "./Carrito.jsx";
+
 
 
 function Navbar() {
     
-    return(
+    return( 
         <>
             <header>
                 <nav className="navbar navbar-expand-lg ">
@@ -15,17 +18,23 @@ function Navbar() {
                         </div>
                         <div className='enlaces col-md-4 '>
                             <ul className="navbar-nav navbar-right">
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">Categoría 1</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">Categoría 2</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">Categoría 3</a>
-                                </li>
+                                {/* <li className="nav-item"> */}
+                                    <Link className="nav-link" to="/">Todos</Link>
+                                {/* </li>
+                                <li className="nav-item"> */}
+                                    <Link className="nav-link" to="/categoria/Accion">Acción</Link>
+                                {/* </li>
+                                <li className="nav-item"> */}
+                                    <Link className="nav-link" to="/categoria/Aventuras">Aventuras</Link>
+                                {/* </li>
+                                <li className="nav-item"> */}
+                                    <Link className="nav-link" to="/categoria/Deportes">Deportes</Link>
+                                {/* </li>                         */}
                             </ul>
                         </div>
+                        <Link to="/CarritoWidget">
+                            <CarritoWidget />
+                        </Link>
                         <Carrito />
                     </div>
                     
