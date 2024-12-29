@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { products } from "../../products";
+// import { products } from "../../products";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CardItem from "../cards/CardItem";
 import './ItemListContainer.css'
+
+import { db } from "../../firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
  
 
 export const ItemListContainer = () => {
@@ -11,26 +14,21 @@ export const ItemListContainer = () => {
     const [juegos, setJuegos] = useState([]);
   
     useEffect(() => {
-      const arrayFiltrado = products.filter(
-          (game) => game.categoria === categoria
-      );
-      const getProducts = new Promise((resolve, reject) => {
-        let isLogged = true;
-        if (isLogged) {
-          resolve(categoria ? arrayFiltrado : products);
-        } else {
-          reject({ message: "No se han podido cargar el listado" });
-        }
+      let productsCollection = collection(db, "products");
+
+    let referFiltroColec = productsCollection;
+    if (categoria) {
+      let filtroColeccion = query(productsCollection, where("category", "==", categoria));
+      referFiltroColec = filtroColeccion;
+    }
+    getDocs(referFiltroColec).then((res) => {
+      let arrayJuegosFiltrados = res.docs.map((elemento) => {
+        return { ...elemento.data(), id: elemento.id };
       });
-  
-      getProducts
-        .then((res) => {
-          setJuegos(res);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }, [categoria]);
+
+      setJuegos(arrayJuegosFiltrados);
+    });
+  }, [categoria]);
 
     return (
       <div>

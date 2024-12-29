@@ -1,7 +1,7 @@
 import './Navbar.css'
 import { Link } from 'react-router-dom';
-import CarritoWidget from "../carritoWidget/CarritoWidget";
-import Carrito from "./Carrito.jsx";
+import CarritoWidget from "../carritoWidget/CarritoWidget.jsx";
+// import Carrito from "./Carrito.jsx";
 
 
 
@@ -22,7 +22,7 @@ function Navbar() {
                                     <Link className="nav-link" to="/">Todos</Link>
                                 {/* </li>
                                 <li className="nav-item"> */}
-                                    <Link className="nav-link" to="/categoria/Accion">Acción</Link>
+                                    <Link className="nav-link" to="/categoria/Accion">Accion</Link>
                                 {/* </li>
                                 <li className="nav-item"> */}
                                     <Link className="nav-link" to="/categoria/Aventuras">Aventuras</Link>
@@ -32,10 +32,10 @@ function Navbar() {
                                 {/* </li>                         */}
                             </ul>
                         </div>
-                        <Link to="/CarritoWidget">
+                        <Link to="/Carrito">
                             <CarritoWidget />
                         </Link>
-                        <Carrito />
+                        {/* <Carrito /> */}
                     </div>
                     
                 </nav>
