@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAFPNcUSxAh-Rag6ZdiDRft69HA-fX0joY",
-  authDomain: "uncleduckgames-6474e.firebaseapp.com",
-  projectId: "uncleduckgames-6474e",
-  storageBucket: "uncleduckgames-6474e.firebasestorage.app",
-  messagingSenderId: "555515895505",
-  appId: "1:555515895505:web:ec3e6276422092a1f22ff0"
+  apiKey: import.meta.env.VITE_KEY,
+  authDomain: import.meta.env.VITE_AUTH,
+  projectId: import.meta.env.VITE_PROJECT,
+  storageBucket: import.meta.env.VITE_STORAGE,
+  messagingSenderId: import.meta.env.VITE_MESSAGING,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
