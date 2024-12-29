@@ -18,7 +18,7 @@ const Carrito = () => {
                     <div style={{ border: "2px solid black", width: "200px" }} key={juego.id}>
                     <h2>nombre: {juego.nombre}</h2>
                     <h3>precio: {juego.precio}</h3>
-                    <h3>cantidad: {juego.stock}</h3>
+                    {/* <h3>cantidad: {juego.stock}</h3> */}
                     <button onClick={() => borrarId(juego.id)}>eliminar</button>
                     </div>
             );
