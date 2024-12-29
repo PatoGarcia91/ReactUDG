@@ -1,8 +1,9 @@
-# React + Vite
+# UncleDuck Games
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Es una tienda de ecommerce de videojuegos, conectada a firebase.
 
-Currently, two official plugins are available:
+### Bug conocido
+*Se me genera una duplicidad de lectura de indices, lo que me genera un undefined al seleccionar un juego y no me permite acceder a su vista previa.
+*Al momento de finalizar una compra, se arrastra el error anterior y no permite ver el juego, se genera el registro en la tabla orders, pero no muestra lo datos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Ambos errores aún se encuentran en revisión

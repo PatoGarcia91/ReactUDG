@@ -46,6 +46,9 @@ const Checkout = () => {
 
   return (
     <div>
+      {ordenId ? (
+        alert("gracias por su compra! tu ticket es: ", {ordenId})
+      ) : (
       <form onSubmit={envioDeFormulario}>
         <input
           type="text"
@@ -68,6 +71,7 @@ const Checkout = () => {
         <button>comprar</button>
         <button type="button">cancelar</button>
       </form>
+      )}
     </div>
   );
 };
